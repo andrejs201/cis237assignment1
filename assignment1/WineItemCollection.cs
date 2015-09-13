@@ -23,10 +23,28 @@ namespace assignment1
             set { length = value; }
         }
 
-        public void FindItem(string itemId)
+        public string FindItem(string itemId)
         {
+            bool itemFound = false;
             int counter = 0;
 
+            while (itemFound == false && counter < wineItems.Length)
+            {
+                if (wineItems[counter] != null)
+                {
+                    if (wineItems[counter].Id == itemId)
+                    {
+                        itemFound = true;
+                    }
+                }
+                counter++;
+            }
+
+            if (itemFound)
+            {
+                return wineItems[counter - 1].ToString();
+            }
+            return "The item was not found";
 
         }
     }

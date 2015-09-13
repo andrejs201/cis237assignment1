@@ -12,10 +12,11 @@ namespace assignment1
 
         public void DisplayMenu()
         {
-            Console.WriteLine("Enter 0 to exit the program");
-            Console.WriteLine("Enter 1 to load the file");
-            Console.WriteLine("Enter 2 to display all the file entries");
-            Console.WriteLine("Enter 3 to find an item by id");
+            Console.WriteLine("0 to exit the program");
+            Console.WriteLine("1 to load the file");
+            Console.WriteLine("2 to display all the file entries");
+            Console.WriteLine("3 to find an item by id");
+            Console.WriteLine("4 to add an item");
             Console.Write("Enter your choice: ");
         }
 
@@ -62,7 +63,26 @@ namespace assignment1
                 counter++;
             }
             Console.WriteLine("");
-            Console.WriteLine("The file has not yet been loaded.");
+            Console.WriteLine("The file has not yet been loaded");
+            Console.WriteLine("");
+        }
+
+        public void FilesNotLoaded()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("The file is not loaded yet");
+            Console.WriteLine("");
+        }
+
+        public void ItemSearchMessage()
+        {
+            Console.Write("Enter the item's id: ");
+        }
+
+        public void ItemSearchResult(string result)
+        {
+            Console.WriteLine("");
+            Console.WriteLine(result);
             Console.WriteLine("");
         }
     }
