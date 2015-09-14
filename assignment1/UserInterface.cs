@@ -85,5 +85,33 @@ namespace assignment1
             Console.WriteLine(result);
             Console.WriteLine("");
         }
+
+        public string NewItemId()
+        {
+            Console.WriteLine("");
+            Console.Write("Enter the new item's id: ");
+            return Console.ReadLine();
+        }
+
+        public string NewItemDescription()
+        {
+            Console.WriteLine("");
+            Console.Write("Enter the new item's description: ");
+            return Console.ReadLine();
+        }
+
+        public string NewItemPack()
+        {
+            Console.WriteLine("");
+            Console.Write("Enter the new item's pack: ");
+            return Console.ReadLine();
+        }
+
+        public void FileAdded()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("The file has been added");
+            Console.WriteLine("");
+        }
     }
 }

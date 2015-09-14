@@ -16,7 +16,6 @@ namespace assignment1
             UserInterface ui = new UserInterface();
             CSVProcessor csvp = new CSVProcessor();
             WineItemCollection WIC = new WineItemCollection();
-            WineItem wineItem;
 
             while (choiceInt != 0)
             {
@@ -37,7 +36,7 @@ namespace assignment1
                 {
                     switch (choiceInt)
                     {
-                        case 1:
+                        case 1: //Load the file
                             if (csvp.Loaded)
                                 ui.FilesAlreadyLoaded();
                             else
@@ -47,14 +46,14 @@ namespace assignment1
                             }
                             break;
 
-                        case 2:
-                            if (csvp.CheckIfLoaded() == 0)
+                        case 2: //Display all files
+                            if (csvp.Loaded)
                                 ui.DisplayFiles();
                             else
                                 ui.FilesNotLoaded();
                             break;
 
-                        case 3:
+                        case 3: //Find item by id
                             if (csvp.Loaded)
                             {
                                 ui.ItemSearchMessage();
@@ -65,8 +64,17 @@ namespace assignment1
                                 ui.FilesNotLoaded();
                             break;
 
-                        case 4:
+                        case 4: //Add item
+                            if (csvp.Loaded)
+                            {
+                                WineItem temp = new WineItem(ui.NewItemId(), ui.NewItemDescription(), ui.NewItemPack());
 
+                                WIC.AddItem(temp);
+
+
+                            }
+                            else
+                                ui.FilesNotLoaded();
                             break;
 
                         default:

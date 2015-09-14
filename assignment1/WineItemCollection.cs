@@ -45,7 +45,23 @@ namespace assignment1
                 return wineItems[counter - 1].ToString();
             }
             return "The item was not found";
+        }
 
+        public void AddItem(WineItem wi)
+        {
+            bool itemAdded = false;
+            int counter = 0;
+
+            while (itemAdded == false)
+            {
+                if (wineItems[counter] == null)
+                {
+                    wineItems[counter] = wi;
+                    itemAdded = true;
+                    this.Length++;
+                }
+                counter++;
+            }
         }
     }
 }

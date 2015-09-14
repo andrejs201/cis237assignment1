@@ -35,12 +35,5 @@ namespace assignment1
             WIC.Length = counter;
             loaded = true;
         }
-
-        public int CheckIfLoaded()
-        {
-            if (loaded)
-                return 0;
-            return 1;
-        }
     }
 }
