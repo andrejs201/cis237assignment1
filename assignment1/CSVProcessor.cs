@@ -19,7 +19,7 @@ namespace assignment1
             get { return loaded; }
         }
 
-        public void LoadFiles()
+        public void LoadFiles() //loads the files to WineItemCollection
         {
             reader = File.OpenText("../../../datafiles/WineList.csv");
             int counter = 0;

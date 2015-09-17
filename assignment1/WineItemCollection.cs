@@ -23,7 +23,7 @@ namespace assignment1
             set { length = value; }
         }
 
-        public string FindItem(string itemId)
+        public string FindItem(string itemId)   //Find the item
         {
             bool itemFound = false;
             int counter = 0;
@@ -47,7 +47,7 @@ namespace assignment1
             return "The item was not found";
         }
 
-        public string AddItem(WineItem wi)
+        public string AddItem(WineItem wi)  //Add an item
         {
             bool itemAdded = false;
             int counter = 0;
@@ -58,16 +58,12 @@ namespace assignment1
                 {
                     return "The item id is already in use. Please choose another id";
                 }
-                else
+                else if (wineItems[counter] == null)
                 {
-                    if (wineItems[counter] == null)
-                    {
-                        wineItems[counter] = wi;
-                        itemAdded = true;
-                        this.Length++;
-                        return "The item has been added";
-                    }
-                    
+                    wineItems[counter] = wi;
+                    itemAdded = true;
+                    this.Length++;
+                    return "The item has been added";
                 }
                 counter++;
             }
