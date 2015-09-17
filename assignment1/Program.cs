@@ -1,4 +1,7 @@
-﻿using System;
+﻿//Andrejs Tomsons
+//Assignment 1
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,7 +72,7 @@ namespace assignment1
                             {
                                 WineItem temp = new WineItem(ui.NewItemId(), ui.NewItemDescription(), ui.NewItemPack());
 
-                                WIC.AddItem(temp);
+                                ui.DisplayText(WIC.AddItem(temp));
 
 
                             }

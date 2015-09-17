@@ -10,7 +10,7 @@ namespace assignment1
     {
         WineItemCollection WIC = new WineItemCollection();
 
-        public void DisplayMenu()
+        public void DisplayMenu()   //The menu
         {
             Console.WriteLine("0 to exit the program");
             Console.WriteLine("1 to load the file");
@@ -25,6 +25,9 @@ namespace assignment1
             return Console.ReadLine();
         }
 
+        //****************
+        //Display messages
+        //****************
         public void InvalidEntry()
         {
             Console.WriteLine("");
@@ -111,6 +114,13 @@ namespace assignment1
         {
             Console.WriteLine("");
             Console.WriteLine("The file has been added");
+            Console.WriteLine("");
+        }
+
+        public void DisplayText(string T)
+        {
+            Console.WriteLine("");
+            Console.WriteLine(T);
             Console.WriteLine("");
         }
     }

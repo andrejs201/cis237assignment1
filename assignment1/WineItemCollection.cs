@@ -47,21 +47,32 @@ namespace assignment1
             return "The item was not found";
         }
 
-        public void AddItem(WineItem wi)
+        public string AddItem(WineItem wi)
         {
             bool itemAdded = false;
             int counter = 0;
 
             while (itemAdded == false)
             {
-                if (wineItems[counter] == null)
+                if (wineItems[counter] != null && wi.Id == wineItems[counter].Id)
                 {
-                    wineItems[counter] = wi;
-                    itemAdded = true;
-                    this.Length++;
+                    return "The item id is already in use. Please choose another id";
+                }
+                else
+                {
+                    if (wineItems[counter] == null)
+                    {
+                        wineItems[counter] = wi;
+                        itemAdded = true;
+                        this.Length++;
+                        return "The item has been added";
+                    }
+                    
                 }
                 counter++;
             }
+
+            return "There has been an error in the AddItem method";
         }
     }
 }

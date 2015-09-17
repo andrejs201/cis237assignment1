@@ -40,7 +40,7 @@ namespace assignment1
             set { this.Pack = value; }
         }
 
-        public string ToString()
+        public override string ToString()
         {
             string temp = this.id + " " + this.description + " " + this.pack;
             return temp;
