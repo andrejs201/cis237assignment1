@@ -39,6 +39,9 @@ namespace assignment1
                 {
                     switch (choiceInt)
                     {
+                        case 0:
+
+                            break;
                         case 1: //Load the file
                             if (csvp.Loaded)
                                 ui.FilesAlreadyLoaded();
